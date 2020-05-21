@@ -1,0 +1,31 @@
+---
+- name: Configure RIP for Router A and B
+  hosts: all
+  gather_facts: no
+  roles:
+  - Juniper.junos
+  connection: local
+  tasks:
+  - name: Interface and RIP configuration
+    juniper_junos_config:
+      load: merge
+      template: ospf_template.conf
+      vars:
+        if_config: "{{ if_config  }}"
+        if_passive: "{{ if_passive }}"
+      provider:
+        host: "{{ ansible_host }}"
+        user: labuser
+        password: Labuser
+
+
+
+
+
+
+
+
+
+
+
+
