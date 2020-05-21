@@ -1,4 +1,4 @@
-# OSPF---Junos-Juniper
+# OSPF Junos-Juniper
 
 We have set up a network consisting of 4 routers running OSPF as shown in the figure.
 
